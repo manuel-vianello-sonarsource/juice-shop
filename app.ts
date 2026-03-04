@@ -3,7 +3,11 @@
  * SPDX-License-Identifier: MIT
  */
 
-require('./lib/startup/validateDependencies')().then(() => {
+try {
+  await require('./lib/startup/validateDependencies')()
   const server = require('./server')
   server.start()
-})
+} catch (error) {
+  console.error(error)
+  process.exit(1)
+}

@@ -12,7 +12,7 @@ const mongodb = require('./mongodb')
 const security = require('../lib/insecurity')
 const logger = require('../lib/logger')
 
-const fs = require('fs')
+const fs = require('node:fs')
 const path = require('path')
 const util = require('util')
 const { safeLoad } = require('js-yaml')
