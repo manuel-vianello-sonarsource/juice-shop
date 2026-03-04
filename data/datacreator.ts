@@ -625,7 +625,7 @@ async function createOrders () {
   const orders = [
     {
       orderId: security.hash(adminEmail).slice(0, 4) + '-' + utils.randomHexString(16),
-      email: (adminEmail.replace(/[aeiou]/gi, '*')),
+      email: (adminEmail.replaceAll(/[aeiou]/gi, '*')),
       totalPrice: basket1Products[0].total + basket1Products[1].total,
       bonus: basket1Products[0].bonus + basket1Products[1].bonus,
       products: basket1Products,
@@ -634,7 +634,7 @@ async function createOrders () {
     },
     {
       orderId: security.hash(adminEmail).slice(0, 4) + '-' + utils.randomHexString(16),
-      email: (adminEmail.replace(/[aeiou]/gi, '*')),
+      email: (adminEmail.replaceAll(/[aeiou]/gi, '*')),
       totalPrice: basket2Products[0].total,
       bonus: basket2Products[0].bonus,
       products: basket2Products,

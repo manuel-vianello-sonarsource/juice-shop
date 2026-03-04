@@ -66,7 +66,7 @@ module.exports = function (grunt) {
   })
 
   grunt.registerTask('checksum', 'Create .md5 checksum files', function () {
-    const fs = require('fs')
+    const fs = require('node:fs')
     const crypto = require('crypto')
     fs.readdirSync('dist/').forEach(file => {
       const buffer = fs.readFileSync('dist/' + file)
