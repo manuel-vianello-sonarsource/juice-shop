@@ -32,7 +32,7 @@ interface TwoFactorAuthStatusPayload {
 export class TwoFactorAuthService {
   constructor (private readonly http: HttpClient) {}
 
-  verify (totpToken: String): Observable<AuthenticationPayload> {
+  verify (totpToken: string): Observable<AuthenticationPayload> {
     return this.http.post<TwoFactorVerifyResponse>(`${environment.hostServer}/rest/2fa/verify`, {
       tmpToken: localStorage.getItem('totp_tmp_token'),
       totpToken: totpToken
