@@ -27,7 +27,7 @@ export class DeliveryMethodComponent implements OnInit {
   public methods: DeliveryMethod[]
   public address: any
   public dataSource
-  public deliveryMethodId: Number = undefined
+  public deliveryMethodId: number = undefined
   selection = new SelectionModel<DeliveryMethod>(false, [])
 
   constructor (private readonly location: Location, private readonly deliverySerivce: DeliveryService,
